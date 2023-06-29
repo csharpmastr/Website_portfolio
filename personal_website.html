@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+        <title>Jomar • Data Analyst</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="header">
+            <div class="container1">
+                <nav>
+                    <a href="#"><img src="logo_site.svg" class="logo" alt="logo"></a>
+                    <ul id="sidemenu">
+                        <li class="animated-nav"><span class="symbol">&lt;</span><a href="#about">&nbsp;About</a><span class="symbol">&gt;</span></li>
+                        <li class="animated-nav"><span class="symbol">&lt; </span><a href="#slider">Projects</a><span class="symbol">&gt;</span></li>
+                        <li class="animated-nav"><span class="symbol">&lt; </span><a href="#services">Services</a><span class="symbol">&gt;</span></li>
+                        <li class="animated-nav"><span class="symbol">&lt; </span><a href="#contact">Contact</a><span class="symbol">&gt;</span></li>
+                        <span class="nav_icon"><iconify-icon icon="mingcute:close-fill" onclick="closemenu()"></iconify-icon></span>
+                    </ul>
+                    <span class="nav_icon burger"><iconify-icon icon="icomoon-free:menu" onclick="openmenu()"></iconify-icon></span>
+                </nav>
+            </div>
+            <div class="container2">
+                <img class="image" src="C:/Users/Admin/Documents/projects/personal_website/main_img.png" alt="Image description">
+                <div class="marquee">
+                    <ul class="marquee__content">
+                        <li>Data Analyst&nbsp;<span class="esp">&lt;&gt;</span></li>
+                        <li>Data Analyst&nbsp;<span class="esp">&lt;&gt;</span></li>
+                        <li>Data Analyst&nbsp;<span class="esp">&lt;&gt;</span></li>
+                    </ul>
+                    <!-- Mirrors the content above -->
+                    <ul class="marquee__content" aria-hidden="true">
+                        <li>Data Analyst&nbsp;<span class="esp">&lt;&gt;</span></li>
+                        <li>Data Analyst&nbsp;<span class="esp">&lt;&gt;</span></li>
+                        <li>Data Analyst&nbsp;<span class="esp">&lt;&gt;</span></li>
+                    </ul>
+                </div>
+                <div class="header-text">
+                    <iconify-icon class="icon" icon="nimbus:location" style="color: #fc5130;" width="25" height="25"></iconify-icon>
+                    <a href="https://shorturl.at/agLS0"  class="text" target="_blank" rel="noreferrer"><p>Laguna, Philippines</p></a>
+                </div>
+            </div>
+        </div>    
+        <!--------ABOUT----------->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col1">
+                    <img src="about_img.png" alt="This is Me" class="about_img">
+                    </div>
+                    <img src="rectangle.png" alt="circle" class="circle">
+                    <div class="about-col2">
+                        <h1 class="sub_title title">ABOUT</h1>
+                        <div class="txt_content">
+                            <p>Hey there! I'm <span style="color: #fc5130; font-weight: bold;">Jomar,</span> a dedicated Data Analyst from the Beautiful Islands of 
+                                the Philippines. With my expertise in the realms of data analysis and visualization, 
+                                I thrive on assisting businesses in the Healthcare, Real Estate, and Banking sectors.  
+                                I help organizations to make data-driven decisions and gain a decisive advantage.</p>
+                            <div class="tab_titles">
+                                <p class="tab_links active_link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab_links" onclick="opentab('experience')">Experience</p>
+                                <p class="tab_links" onclick="opentab('education')">Education</p>
+                            </div>
+                            <div class="tab_content active_tab" id="skills">
+                                <ul>
+                                    <li><span>Data Preparation</span><br>Web Scraping<br>SQL Queries</li>
+                                    <li><span>Data Analysis</span><br>Python<br>Excel <br>Google Sheet</li>
+                                    <li><span>Data Visualization</span><br>Tableau<br>Power BI</li>
+                                </ul>
+                            </div>
+                            <div class="tab_content" id="experience">
+                                <ul>
+                                    <li><span>2021 - Current</span><br>Self-Made Projects Using Real-World Data</li>
+                                </ul>
+                            </div>
+                            <div class="tab_content" id="education">
+                                <ul>
+                                    <li><span>2022</span><br>Data Analysis Certification by Google</li>
+                                    <li><span>2023</span><br>BS in Computer Science major in Data Science at Laguna University</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--script for About-->
+        <script>
+            var tablinks = document.getElementsByClassName("tab_links");
+            var tabcontents = document.getElementsByClassName("tab_content");
+
+            function opentab(tabname) {
+                for(tablink of tablinks) {
+                    tablink.classList.remove("active_link");
+                }
+                for(tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active_tab");
+                }
+                event.currentTarget.classList.add("active_link");
+                document.getElementById(tabname).classList.add("active_tab")
+            }
+        </script>
+
+        <!--Script for Close and Open icon-->
+
+        <script>
+
+            var sidemenu = document.getElementById("sidemenu");
+
+            function openmenu() {
+                sidemenu.style.transform = "translateX(100%)"
+            }
+
+            function closemenu() {
+                sidemenu.style.transform = "translateX(230%)"
+            }
+
+        </script>
+
+        <!-- --------PROJECTS------- -->
+        <span class="proj_txt title">PROJECTS</span> 
+        <section id="slider">
+            <!--radio button to change image-->
+            <input type="radio" name="slider" id="s1" checked>
+            <input type="radio" name="slider" id="s2">
+            <input type="radio" name="slider" id="s3">
+            <input type="radio" name="slider" id="s4">
+            <input type="radio" name="slider" id="s5">
+            <!--images-->
+            <label for="s1" id="slider1"><img src="sample_dashboard/img1.png" class="imgproj"></label>
+            <label for="s2" id="slider2"><img src="sample_dashboard/img2.png" class="imgproj"></label>
+            <label for="s3" id="slider3"><img src="sample_dashboard/img3.png" class="imgproj"></label>
+            <label for="s4" id="slider4"><img src="sample_dashboard/img4.png" class="imgproj"></label>
+            <label for="s5" id="slider5"><img src="sample_dashboard/img5.png" class="imgproj"></label> 
+        </section>
+
+        <!-----------SERVICES------------>
+        <div id="services">
+            <div class="services_container">
+                <h1 class="serv_txt title">SERVICES</h1> 
+                <div class="services_lists">
+                    <div>
+                        <iconify-icon icon="fa6-solid:magnifying-glass-chart" width="60"></iconify-icon>
+                        <h2>Data Preparation</h2>
+                        <p>Harness the full potential of your data through our comprehensive data preparation service. 
+                        Our team of experts specializes in web scraping, leveraging SQL queries, and conducting rigorous data cleaning to ensure accuracy and integrity.
+                        Empower your business with actionable insights and stay ahead of the competition.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                    <div>
+                        <iconify-icon icon="mdi:graph-scatter-plot" style="color: white;" width="60" height="60"></iconify-icon>
+                        <h2>Data Analysis</h2>
+                        <p>Unlock the true potential of your data by analyzing it. Leveraging the power of Python, Microsoft Excel, and Google Sheets, we deliver robust 
+                        and in-depth analysis solutions.With precision and expertise, we transform raw data into valuable insights, empowering you to make informed 
+                        decisions and drive business growth.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                    <div>
+                        <iconify-icon icon="grommet-icons:bar-chart" style="color: white;" width="60" height="60"></iconify-icon>
+                        <h2>Data Visualization</h2>
+                        <p>Elevate your data analysis with visually impactful dashboards and reports.
+                        Harnessing the capabilities of Tableau and Power BI, we create immersive visualizations that bring your data to life.
+                        Unlock the true potential of your data, gain actionable insights, and make informed decisions to drive business success.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!------------CONTACT------------->
+        <div id="contact">
+            <div class="container_contact">
+                <div class="row">
+                    <div class="contact_icon">
+                        <h1 class="contact_txt title">Contact Me</h1>
+                        <p><iconify-icon icon="fa:send" width="24" height="24"></iconify-icon> contact@example.com</p>
+                        <p><iconify-icon icon="healthicons:phone-negative" width="22" height="22"></iconify-icon> +63 9608493874</p>
+                        <div class="social_icons">
+                            <a class="fb" href="https://www.facebook.com/JomarTalambayan" target="_blank"><iconify-icon icon="gg:facebook" width="30" height="30"></iconify-icon></a>
+                            <a class="ig" href="https://www.instagram.com/jomsxx.io/" target="_blank"><iconify-icon icon="ri:instagram-line"></iconify-icon></a>
+                            <a class="in" href="https://www.linkedin.com/in/jomar-talambayan-52730227a/" target="_blank"><iconify-icon icon="mdi:linkedin"></iconify-icon></a>
+                            <a class="up" href="https://www.upwork.com/freelancers/~0146c1e636c59827c2" target="_blank"><iconify-icon icon="bxl:upwork"></iconify-icon></a>
+                        </div>
+                        <a href="career_files/talambayan_resume.pdf" download class="db dbtn" target="_blank">Download CV</a>
+                    </div>
+                    <div class="contact_form">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn">Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright © 2023. Made with <iconify-icon icon="mdi:heart" style="color: #fc5130;" width="24" height="24"></iconify-icon> by Jomar</p>
+            </div>
+        </div>
+
+        <!--Script for Sending Contact Form to GSheets-->
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxo-znUhQikcoPQ_NuATkSqTn3PAIkdToxQnjGUXE1r-dy8xsqvfMXcj0xnJinvttyz/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg")
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML = "Message Sent"
+                    setTimeout(function(){
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+    </body>
+</html>
