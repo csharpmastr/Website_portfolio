@@ -141,6 +141,7 @@ body {
   max-width: 986px;
   max-height: 800px;
   left: 300px;
+  filter: blur(40px);
 }
 
 .esp {
@@ -411,6 +412,7 @@ body {
   width: 150%;
   border-radius: 50%;
   font-family: "Exo+2", sans-serif;
+  filter: blur(40px);
 }
 
 .about-col2 {
